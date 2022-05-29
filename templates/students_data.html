@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}Students Data{% endblock %}
+{% block subtitle %}Students Data{% endblock %}
+{% block body %}
+
+{% for g_key,g_val in data_objects.items %}
+    <div class="card w-100 shadow-lg p-3 mb-5 bg-body rounded">
+        <div class="card-body">
+            <h5 class="card-title shadow-lg p-3 mb-5 bg-body rounded">{{g_key}}</h5>
+            <div class="d-flex">
+                {% for b_key,b_val in g_val.items %}
+                    <table class="table shadow-lg p-3 m-1 bg-body rounded">
+                        <thead>
+                            <tr>
+                                <th scope="col">{{ b_key }}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for d_key,d_val in b_val.items %}
+                                <tr>
+                                    <td><a href="{{d_val}}">{{d_key}}</a></td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>               
+                {% endfor %}
+            </div>
+        </div>
+    </div>    
+{% endfor %}
+{% comment %} {{data_objects|pprint}} {% endcomment %}
+{% endblock %}

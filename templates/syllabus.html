@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Syllabus{% endblock %}
+{% block subtitle %}Syllabus{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <tbody>
+                    {% for syllab in syllabus %}
+                        <tr>
+                            <td>                        
+                                <a href="{{syllab.doc_url}}">{{syllab.batch}} {{syllab.regulation}} -> {{syllab.title}}</a>
+                            </td>                
+                        <tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

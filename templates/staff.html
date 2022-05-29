@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}SVIT STAFF{% endblock %}
+{% block subtitle %}SVIT STAFF DETAILS{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <th>Name of the Faculty</th>
+                <th>Department</th>
+                <th>Mobile No</th>
+                <th>Mail Id</th>
+                <tbody>
+                    {% for staff in staffDetails %}
+                        <tr>
+                            {% if staff.profile %}
+                                <td><a href="{{staff.profile}}">{{staff.name}}</a></td>
+                            {% else %}
+                                <td>{{staff.name}}</td>
+                            {% endif %}
+
+                            <td>{{staff.department}}</td>
+                            <td>{{staff.mobile_no}}</td>
+                            <td>{{staff.main_id}}</td>
+                            
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

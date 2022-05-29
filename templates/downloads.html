@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Downloads{% endblock %}
+{% block subtitle %}Downloads{% endblock %}
+
+{% block body %}
+    <div class="row">
+        {% for cat, url_list in downloads.items %}
+            <div class="col">
+                <table class="table">
+                    <th>{{cat.upper}}</th>                    
+                    {% for doc_url in url_list %}
+                            <tbody>
+                                    <tr>
+                                        <td>                        
+                                            <a href="{{doc_url.doc_url}}">{{doc_url.title}}</a>
+                                        </td>                
+                                    <tr>
+                            </tbody>
+                    {% endfor %}
+                </table>        
+            </div>            
+        {% endfor %}
+    </div>
+{% endblock %}

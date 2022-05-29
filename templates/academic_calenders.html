@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Academic Calenders{% endblock %}
+{% block subtitle %}Academic Calenders{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <tbody>
+                    {% for calender in calenders %}
+                        <tr>
+                            <td>                        
+                                <a href="{{calender.doc_url}}">{{calender.regulation}} -> {{calender.batch}} -> {{calender.title}}</a>
+                            </td>                
+                        <tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}SVITEXAMS{% endblock %}
+{% block subtitle %}Circulars{% endblock %}
+
+{% block body %}
+<div class="row">
+    <div class="col-lg-9">
+        {% for circular in circulars %}
+            <ul>
+                <a href="{{circular.doc_url}}">
+                    <li>{{circular.title}}</li>
+                </a>
+            </ul>
+        {% endfor %}
+    </div>
+    <div class="col border border-success p-2 mb-2">
+            <div class="row">
+                <h5>Examination Section</h5>
+            </div>
+            <div class="row">
+                <h6>VISION</h6>
+                <p>The Examinations Section strives to be a comprehensive center of excellence for processing examinations in accordance with the university's mandate</p>
+            </div>
+            <div class="row">
+                <h6>
+                    MISSION
+                </h6>
+                <p>To quickly process all university examinations while adhering to best management, integrity and confidentiality practices to meet the needs of dynamic university</p>
+            </div>
+    </div>
+</div>
+
+{% endblock %}
