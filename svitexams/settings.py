@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-j_8)^^c1t+__dae)^ndn0^ru8bs+lj054uz*k-^amr(-_^fx+=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['svit9fexams.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['svit9fexams.herokuapp.com','localhost']
 
 
 # Application definition
@@ -89,11 +89,14 @@ WSGI_APPLICATION = 'svitexams.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd7os3jt0p4n0c1',
+        'HOST': 'ec2-44-195-169-163.compute-1.amazonaws.com',
+        'PORT': 5432,
+        'USER': 'amhxxwvirgydhk',
+        'PASSWORD': 'fe3fa410d4547ef51c6177aa912f631246a3097a68b707adba62eb6a52406e6f'
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
