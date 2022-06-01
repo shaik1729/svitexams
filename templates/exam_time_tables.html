@@ -6,7 +6,7 @@
 {% block body %}
     <div class="row">
         {% for cat, url_list in time_tables.items %}
-            <div class="col">
+            <div class="col-md-6 col-sm-12">
                 <table class="table">
                     <th>{{cat.upper}}</th>                    
                     {% for doc_url in url_list %}
