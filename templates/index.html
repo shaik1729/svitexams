@@ -8,7 +8,7 @@
         {% for circular in circulars %}
             <ul>
                 <a href="{{circular.doc_url}}">
-                    <li>{{circular.title}}</li>
+                    <li>{{ circular.created_date }} -> {{circular.title}}</li>
                 </a>
             </ul>
         {% endfor %}

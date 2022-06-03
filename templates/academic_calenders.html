@@ -10,7 +10,7 @@
                     {% for calender in calenders %}
                         <tr>
                             <td>                        
-                                <a href="{{calender.doc_url}}">{{calender.regulation}} -> {{calender.batch}} -> {{calender.title}}</a>
+                                <a href="{{calender.doc_url}}">{{calender.created_date}} {{calender.regulation}} -> {{calender.batch}} -> {{calender.title}}</a>
                             </td>                
                         <tr>
                     {% endfor %}

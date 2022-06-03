@@ -10,7 +10,7 @@
                     {% for syllab in syllabus %}
                         <tr>
                             <td>                        
-                                <a href="{{syllab.doc_url}}">{{syllab.batch}} {{syllab.regulation}} -> {{syllab.title}}</a>
+                                <a href="{{syllab.doc_url}}">{{syllab.created_date}} {{syllab.batch}} {{syllab.regulation}} -> {{syllab.title}}</a>
                             </td>                
                         <tr>
                     {% endfor %}
