@@ -1,0 +1,26 @@
+Steps for running : 
+
+step 1 : create a folder
+	$ mkdir svitexams
+step 2 : clone the repository
+	$ cd svitexams
+	$ git clone https://github.com/shaik1729/svitexams.git
+step 3 : create a vertual env
+	for linux	
+		$ python3 -m venv env
+	for windows
+		$ py -m venv env
+step 4 : activate env
+	for linux
+		$ source env/bin/activate
+	for windows
+		$ Script\bin\activate
+step 5 : install the requirments
+	$ pip install -r requirments.txt
+step 6 : make the migrations in the database
+	$ python manage.py makemigrations
+step 7 : create super admin
+	$ python manage.py createsuperuser
+step 8 : run the server
+	$ python manage.py runserver
+	server runs on port 8000 by befault : localhost:8000
